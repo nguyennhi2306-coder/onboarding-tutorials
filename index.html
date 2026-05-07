@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Tutorials</title>
+
+<style>
+:root {
+  --uds-blue: #000064;
+  --uds-orange: #ff8b00;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: var(--uds-blue);
+  color: white;
+  text-align: center;
+  padding: 48px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.header-subtitle {
+  margin-top: 16px;
+  font-size: 1.2rem;
+}
+
+/* PROGRESS BAR */
+#progressWrapper {
+  max-width: 900px;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--uds-blue), var(--uds-orange));
+  transition: width 0.4s ease;
+}
+
+/* PAGES */
+.page {
+  display: none;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.page.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+h2, h3 {
+  color: var(--uds-blue);
+}
+
+/* NAV BUTTONS */
+.nav {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-btn {
+  background: #e0e0e0;
+}
+
+.next-btn {
+  background: var(--uds-blue);
+  color: white;
+}
+
+.next-btn:hover {
+  background: #1a1a99;
+}
+
+.done-btn {
+  background: var(--uds-orange);
+  color: white;
+}
+
+/* VIDEO EMBEDS */
+iframe.video {
+  width: 100%;
+  height: 480px;
+  border: none;
+  margin-top: 16px;
+}
+
+/* THANK YOU */
+.thank-you {
+  text-align: center;
+  line-height: 1.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Onboarding Tutorials</h1>
+  <p class="header-subtitle">
+    Welcome to German UDS! We are very glad to have you on board.
+  </p>
+</header>
+
+<div id="progressWrapper">
+  <div id="progressBar"></div>
+</div>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <div class="card">
+    <p>
+      Please find our onboarding tutorials, where you can learn more about the software,
+      tools, and applications we use, as well as our internal communication processes.
+    </p>
+    <p>
+      These resources are designed to help you become familiar with our systems and get started smoothly.
+    </p>
+    <p>
+      Once again, welcome to the team! 😊
+    </p>
+    <div class="nav">
+      <span></span>
+      <button class="next-btn" onclick="nextPage()">Start</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <div class="card">
+    <h2>1. Overview & Personio</h2>
+    <p>You will explore Personio, record your working hours, and request time off.</p>
+
+    <iframe class="video"
+      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQBegBtI8S6aR6k63Ni2d8YEAZ5LSCjhUGaFWfoBirdEkM8?embed=true">
+    </iframe>
+
+    <div class="nav">
+      <button class="back-btn" onclick="prevPage()">Back</button>
+      <button class="next-btn" onclick="nextPage()">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+  <div class="card">
+    <h2>2. Loop</h2>
+    <p>Our internal onboarding and information hub.</p>
+
+    <iframe class="video"
+      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQCxCVcaDdBIQouHuED8WAL4AV239N3vkkwmp5sI6lOHY8Q?embed=true">
+    </iframe>
+
+    <div class="nav">
+      <button class="back-btn" onclick="prevPage()">Back</button>
+      <button class="next-btn" onclick="nextPage()">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+  <div class="card">
+    <h2>3. Planner</h2>
+    <p>Manage tasks and collaborate with your team.</p>
+
+    <iframe class="video"
+      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQDG6rm0OPswSqjcHJ9_8MYeAVHsPJGGQUHerPNp0WfgBHU?embed=true">
+    </iframe>
+
+    <div class="nav">
+      <button class="back-btn" onclick="prevPage()">Back</button>
+      <button class="next-btn" onclick="nextPage()">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5">
+  <div class="card">
+    <h2>4. Internal Communication</h2>
+    <p>Communication guidelines and Microsoft Teams usage.</p>
+
+    <iframe class="video"
+      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQD3wo9dA428QYLomact25o2AeOQKPE7ncwvEPIzzSdJNL0?embed=true">
+    </iframe>
+
+    <div class="nav">
+      <button class="back-btn" onclick="prevPage()">Back</button>
+      <button class="next-btn" onclick="nextPage()">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="page6">
+  <div class="card">
+    <h2>5. Outlook</h2>
+
+    <h3>5.1 Outlook</h3>
+    <iframe class="video"
+      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQDEO-37baPnS7_ssLbdTck6ASSNsn-CXtCm1Jotkn3pSPs?embed=true">
+    </iframe>
+
+    <h3 style="margin-top:24px;">5.2 Outlook Calendar</h3>
+    <iframe class="video"
+      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQDkr2_xx15nSq7qOY2QWXuAAVto6qyhBsro9sNqogUtXZg?embed=true">
+    </iframe>
+
+    <div class="nav">
+      <button class="back-btn" onclick="prevPage()">Back</button>
+      <button class="next-btn" onclick="nextPage()">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="page7">
+  <div class="card thank-you">
+    <h2>Thank you for watching our onboarding videos! 🎉</h2>
+    <p>
+      We hope these sessions helped you gain a better overview of our tools,
+      systems, and internal processes at German UDS.
+    </p>
+    <p>
+      We would really appreciate it if you could take some time to share
+      your feedback about the onboarding experience.
+    </p>
+
+    <iframe
+      src="https://forms.office.com/Pages/ResponsePage.aspx?id=5-7KcjaquE2jdutla7CSwr5RcK9tpHpCv110xfKXAbhUNVlYN0tVUTIwT1M3MzhaWlkzQU5MSk9EQi4u">
+    </iframe>
+
+    <div style="margin-top:30px;">
+      <button class="done-btn">Completed</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentPage = 1;
+const totalPages = 7;
+
+function showPage(page) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page" + page).classList.add("active");
+
+  document.getElementById("progressBar").style.width =
+    Math.round((page - 1) / (totalPages - 1) * 100) + "%";
+}
+
+function nextPage() {
+  if (currentPage < totalPages) {
+    currentPage++;
+    showPage(currentPage);
+  }
+}
+
+function prevPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    showPage(currentPage);
+  }
+}
+
+window.onload = () => showPage(currentPage);
+</script>
+
+</body>
+</html>
