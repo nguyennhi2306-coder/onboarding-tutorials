@@ -76,6 +76,14 @@ h2, h3 {
   color: var(--uds-blue);
 }
 
+/* VIDEO EMBEDS */
+iframe.video {
+  width: 100%;
+  height: 480px;
+  border: none;
+  margin-top: 16px;
+}
+
 /* NAV BUTTONS */
 .nav {
   margin-top: 24px;
@@ -108,14 +116,6 @@ button {
 .done-btn {
   background: var(--uds-orange);
   color: white;
-}
-
-/* VIDEO EMBEDS */
-iframe.video {
-  width: 100%;
-  height: 480px;
-  border: none;
-  margin-top: 16px;
 }
 
 /* THANK YOU */
@@ -166,7 +166,8 @@ iframe.video {
     <p>You will explore Personio, record your working hours, and request time off.</p>
 
     <iframe class="video"
-      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQBegBtI8S6aR6k63Ni2d8YEAZ5LSCjhUGaFWfoBirdEkM8?embed=true">
+      src="https://buds365.sharepoint.com/sites/1000GermanUDS-WorkingMelanie/_layouts/15/embed.aspx?UniqueId=481b805e-2ef1-479a-a93a-dcd8b677c604&embed=%7B%22ust%22%3Atrue%7D"
+      allowfullscreen>
     </iframe>
 
     <div class="nav">
@@ -183,7 +184,8 @@ iframe.video {
     <p>Our internal onboarding and information hub.</p>
 
     <iframe class="video"
-      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQCxCVcaDdBIQouHuED8WAL4AV239N3vkkwmp5sI6lOHY8Q?embed=true">
+      src="https://buds365.sharepoint.com/sites/1000GermanUDS-WorkingMelanie/_layouts/15/embed.aspx?UniqueId=1a5709b1-d00d-4248-8b87-b840fc5802f8&embed=%7B%22ust%22%3Atrue%7D"
+      allowfullscreen>
     </iframe>
 
     <div class="nav">
@@ -197,10 +199,10 @@ iframe.video {
 <div class="page" id="page4">
   <div class="card">
     <h2>3. Planner</h2>
-    <p>Manage tasks and collaborate with your team.</p>
 
     <iframe class="video"
-      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQDG6rm0OPswSqjcHJ9_8MYeAVHsPJGGQUHerPNp0WfgBHU?embed=true">
+      src="https://buds365.sharepoint.com/sites/1000GermanUDS-WorkingMelanie/_layouts/15/embed.aspx?UniqueId=b4b9eac6-fb38-4a30-a8dc-1c9f7ff0c61e&embed=%7B%22ust%22%3Atrue%7D"
+      allowfullscreen>
     </iframe>
 
     <div class="nav">
@@ -214,10 +216,10 @@ iframe.video {
 <div class="page" id="page5">
   <div class="card">
     <h2>4. Internal Communication</h2>
-    <p>Communication guidelines and Microsoft Teams usage.</p>
 
     <iframe class="video"
-      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQD3wo9dA428QYLomact25o2AeOQKPE7ncwvEPIzzSdJNL0?embed=true">
+      src="https://buds365.sharepoint.com/sites/1000GermanUDS-WorkingMelanie/_layouts/15/embed.aspx?UniqueId=5d8fc2f7-8d03-41bc-82e8-99a72ddb9a36&embed=%7B%22ust%22%3Atrue%7D"
+      allowfullscreen>
     </iframe>
 
     <div class="nav">
@@ -234,12 +236,14 @@ iframe.video {
 
     <h3>5.1 Outlook</h3>
     <iframe class="video"
-      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQDEO-37baPnS7_ssLbdTck6ASSNsn-CXtCm1Jotkn3pSPs?embed=true">
+      src="https://buds365.sharepoint.com/sites/1000GermanUDS-WorkingMelanie/_layouts/15/embed.aspx?UniqueId=fbed3bc4-a36d-4be7-bfec-b0b6dd4dc93a&embed=%7B%22ust%22%3Atrue%7D"
+      allowfullscreen>
     </iframe>
 
     <h3 style="margin-top:24px;">5.2 Outlook Calendar</h3>
     <iframe class="video"
-      src="https://buds365.sharepoint.com/:v:/s/1000GermanUDS-WorkingMelanie/IQDkr2_xx15nSq7qOY2QWXuAAVto6qyhBsro9sNqogUtXZg?embed=true">
+      src="https://buds365.sharepoint.com/sites/1000GermanUDS-WorkingMelanie/_layouts/15/embed.aspx?UniqueId=f16fafe4-5ec7-4a67-aeea-398d90597b80&embed=%7B%22ust%22%3Atrue%7D"
+      allowfullscreen>
     </iframe>
 
     <div class="nav">
@@ -263,7 +267,10 @@ iframe.video {
     </p>
 
     <iframe
-      src="https://forms.office.com/Pages/ResponsePage.aspx?id=5-7KcjaquE2jdutla7CSwr5RcK9tpHpCv110xfKXAbhUNVlYN0tVUTIwT1M3MzhaWlkzQU5MSk9EQi4u">
+      src="https://forms.office.com/Pages/ResponsePage.aspx?id=5-7KcjaquE2jdutla7CSwr5RcK9tpHpCv110xfKXAbhUNVlYN0tVUTIwT1M3MzhaWlkzQU5MSk9EQi4u"
+      width="100%"
+      height="600"
+      style="border:none;">
     </iframe>
 
     <div style="margin-top:30px;">
@@ -279,23 +286,16 @@ const totalPages = 7;
 function showPage(page) {
   document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
   document.getElementById("page" + page).classList.add("active");
-
   document.getElementById("progressBar").style.width =
     Math.round((page - 1) / (totalPages - 1) * 100) + "%";
 }
 
 function nextPage() {
-  if (currentPage < totalPages) {
-    currentPage++;
-    showPage(currentPage);
-  }
+  if (currentPage < totalPages) currentPage++, showPage(currentPage);
 }
 
 function prevPage() {
-  if (currentPage > 1) {
-    currentPage--;
-    showPage(currentPage);
-  }
+  if (currentPage > 1) currentPage--, showPage(currentPage);
 }
 
 window.onload = () => showPage(currentPage);
